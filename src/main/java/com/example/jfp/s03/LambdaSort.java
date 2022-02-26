@@ -3,16 +3,6 @@ package com.example.jfp.s03;
 import java.util.Arrays;
 import java.util.Comparator;
 
-class LongerFirstComparator implements Comparator<String> {
-    @Override
-    public int compare(String left, String right) {
-        if (left.length() == right.length()) {
-            return left.compareTo(right);
-        }
-        return right.length() - left.length();
-    }
-}
-
 public class LambdaSort {
     public static void main(String[] args) {
         String[] names = { "Tom", "Bo", "Billy", "Tony", "Kim", "Marcy", "Josh" };
