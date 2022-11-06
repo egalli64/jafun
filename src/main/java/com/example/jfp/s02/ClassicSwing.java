@@ -1,3 +1,10 @@
+/*
+ * Java Functional Programming
+ * 
+ * High-Order Function emulation in classic Java
+ * 
+ * Event manager Example
+ */
 package com.example.jfp.s02;
 
 import java.awt.event.ActionEvent;
@@ -8,6 +15,15 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
+/**
+ * A simple swing frame that deals with a couple of events
+ * 
+ * It defines an inner class implementing the action to be executed when one of
+ * the two events is observed, then add an action listener on a button for it
+ * <p>
+ * The other event is managed by an action listener defined and created on the
+ * fly. If the action performed is slim enough, this is the preferred approach
+ */
 @SuppressWarnings("serial")
 public class ClassicSwing extends JFrame {
     private final JButton btnLeft;
@@ -15,6 +31,10 @@ public class ClassicSwing extends JFrame {
     private int counterLeft;
     private int counterRight;
 
+    /**
+     * An example of classic event listener
+     * <p>
+     */
     private class LeftButtonChanger implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {

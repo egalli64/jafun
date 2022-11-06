@@ -1,8 +1,20 @@
+/*
+ * Java Functional Programming
+ * 
+ * High-Order Function emulation in classic Java
+ * 
+ * Strategy Example
+ */
 package com.example.jfp.s02;
 
 import java.util.Arrays;
 import java.util.Comparator;
 
+/**
+ * An example of classic Java comparator
+ * 
+ * The strings are ordered by size, then by natural order
+ */
 class LongerFirstComparator implements Comparator<String> {
     @Override
     public int compare(String left, String right) {
@@ -13,6 +25,13 @@ class LongerFirstComparator implements Comparator<String> {
     }
 }
 
+/**
+ * Given an array of strings, sort it using
+ * 
+ * <ol>
+ * <li>A LongerFirstComparator
+ * <li>A new Comparator defined and created on the fly - shorter first
+ */
 public class ClassicSort {
     public static void main(String[] args) {
         String[] names = { "Tom", "Bo", "Billy", "Tony", "Kim", "Marcy", "Josh" };

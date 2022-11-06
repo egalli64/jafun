@@ -1,37 +1,20 @@
+/*
+ * Java Functional Programming
+ * 
+ * High-Order Function emulation in classic Java
+ * 
+ * Thread Example
+ */
 package com.example.jfp.s02;
 
-class Looper extends Thread {
-    public Looper(String name) {
-        super(name);
-    }
-
-    @Override
-    public void run() {
-        for (int i = 0; i < 3; i++) {
-            try {
-                System.out.printf("%s: simulation %d%n", Thread.currentThread().getName(), i);
-                Thread.sleep((long) (Math.random() * 100));
-            } catch (InterruptedException e) {
-                throw new IllegalStateException(e);
-            }
-        }
-    }
-}
-
-class Runner implements Runnable {
-    @Override
-    public void run() {
-        for (int i = 0; i < 3; i++) {
-            try {
-                System.out.printf("%s: simulation %d%n", Thread.currentThread().getName(), i);
-                Thread.sleep((long) (Math.random() * 100));
-            } catch (InterruptedException e) {
-                throw new IllegalStateException(e);
-            }
-        }
-    }
-}
-
+/**
+ * Given an array of thread, start then join on them.
+ * 
+ * Different classic approaches are shown.
+ * <p>
+ * Defining, creating a runnable, then a thread is usually the preferred one, at
+ * least when the code to be executed is short.
+ */
 public class ClassicThread {
     public static void main(String[] args) {
         Thread ts[] = { new Looper("L1"), //
@@ -64,5 +47,46 @@ public class ClassicThread {
         }
 
         System.out.println("Done");
+    }
+
+}
+
+/**
+ * A full-fledged thread.
+ * <p>
+ * Usually this is not the preferred approach.
+ */
+class Looper extends Thread {
+    public Looper(String name) {
+        super(name);
+    }
+
+    @Override
+    public void run() {
+        for (int i = 0; i < 3; i++) {
+            try {
+                System.out.printf("%s: simulation %d%n", Thread.currentThread().getName(), i);
+                Thread.sleep((long) (Math.random() * 100));
+            } catch (InterruptedException e) {
+                throw new IllegalStateException(e);
+            }
+        }
+    }
+}
+
+/**
+ * A runnable class, implementing the method to be run for a new thread.
+ */
+class Runner implements Runnable {
+    @Override
+    public void run() {
+        for (int i = 0; i < 3; i++) {
+            try {
+                System.out.printf("%s: simulation %d%n", Thread.currentThread().getName(), i);
+                Thread.sleep((long) (Math.random() * 100));
+            } catch (InterruptedException e) {
+                throw new IllegalStateException(e);
+            }
+        }
     }
 }
