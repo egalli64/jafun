@@ -1,3 +1,8 @@
+/*
+ * Introduction to Functional Programming with Java
+ * 
+ * https://github.com/egalli64/jafp
+ */
 package com.example.jafp.s03;
 
 import java.awt.event.ActionListener;
@@ -7,6 +12,14 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
+/**
+ * High-Order Function in Java - Event manager example
+ * <p>
+ * A simple swing frame that deals with a couple of events.
+ * <li>A lambda is used to define an ActionListener that is passed to a button
+ * by addActionListener
+ * <li>Another lambda is passed directly to addActionListener
+ */
 @SuppressWarnings("serial")
 public class LambdaSwing extends JFrame {
     private final JButton btnLeft;
@@ -36,6 +49,11 @@ public class LambdaSwing extends JFrame {
         setVisible(true);
     }
 
+    /**
+     * Start this tiny swing application
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         new LambdaSwing();
     }

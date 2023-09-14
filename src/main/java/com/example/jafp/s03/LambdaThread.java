@@ -1,6 +1,23 @@
+/*
+ * Introduction to Functional Programming with Java
+ * 
+ * https://github.com/egalli64/jafp
+ */
 package com.example.jafp.s03;
 
+/**
+ * High-Order Function in Java - Thread example
+ */
 public class LambdaThread {
+    /**
+     * Given an array of thread, start then join on them. Different functional
+     * approaches are shown.
+     * <p>
+     * Defining, creating a runnable, then a thread is usually the preferred one, at
+     * least when the code to execute is short.
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         Runnable runner = () -> {
             for (int i = 0; i < 3; i++) {
