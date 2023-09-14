@@ -1,9 +1,7 @@
 /*
- * Java Functional Programming
+ * Introduction to Functional Programming with Java
  * 
- * High-Order Function emulation in classic Java
- * 
- * Event manager Example
+ * https://github.com/egalli64/jafp
  */
 package com.example.jafp.s02;
 
@@ -16,6 +14,8 @@ import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
 /**
+ * High-Order Function emulation in classic Java - Event manager example
+ * <p>
  * A simple swing frame that deals with a couple of events
  * 
  * It defines an inner class implementing the action to be executed when one of
@@ -32,8 +32,7 @@ public class ClassicSwing extends JFrame {
     private int counterRight;
 
     /**
-     * An example of classic event listener
-     * <p>
+     * A classic event listener
      */
     private class LeftButtonChanger implements ActionListener {
         @Override
@@ -67,6 +66,11 @@ public class ClassicSwing extends JFrame {
         setVisible(true);
     }
 
+    /**
+     * Start this tiny swing application
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         new ClassicSwing();
     }
