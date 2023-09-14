@@ -1,8 +1,16 @@
+/*
+ * Introduction to FP with Java
+ * 
+ * https://github.com/egalli64/jafp
+ */
 package com.example.jfp.s05;
 
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Method reference vs explicit method call
+ */
 public class MethodReference {
     public static void main(String[] args) {
         String[] names = { "tom", "Bob", "kelly", "Ted" };
@@ -23,13 +31,13 @@ public class MethodReference {
         System.out.println("Natural order (ignore case) by method reference: " + Arrays.toString(names));
 
         List<String> list = List.of(names);
-        
+
         // lambda
-        System.out.println("Print each element by lambda");
-        list.forEach(s -> System.out.print(s));
-        
+        System.out.println("\nPrint each element by lambda");
+        list.forEach(s -> System.out.println(s));
+
         // method reference
-        System.out.println("Print each element by method reference");
+        System.out.println("\nPrint each element by method reference");
         list.forEach(System.out::println);
     }
 }
