@@ -13,8 +13,8 @@ import java.util.Comparator;
  * <p>
  * Given an array of strings, sort it using
  * <ol>
- * <li>A LongerFirstComparator
- * <li>A new Comparator defined and created on the fly - shorter first
+ * <li>A comparator defined elsewhere - LongerFirstComparator
+ * <li>A comparator defined and created on the fly - shorter first
  */
 public class ClassicSort {
     public static void main(String[] args) {
@@ -23,32 +23,14 @@ public class ClassicSort {
 
         Comparator<String> c = new LongerFirstComparator();
         Arrays.sort(names, c);
-        System.out.println("Sorted (naturally) from longer to shorter: " + Arrays.toString(names));
+        System.out.println("Sorted from longer to shorter, then naturally: " + Arrays.toString(names));
 
         Arrays.sort(names, new Comparator<String>() {
             @Override
-            public int compare(String left, String right) {
-                if (left.length() == right.length()) {
-                    return left.compareTo(right);
-                }
-                return left.length() - right.length();
+            public int compare(String s, String t) {
+                return s.length() == t.length() ? s.compareTo(t) : s.length() - t.length();
             }
         });
-        System.out.println("Sorted (naturally) from shorter to longer: " + Arrays.toString(names));
-    }
-}
-
-/**
- * An example of classic Java comparator.
- * <p>
- * The strings are ordered by size, then by natural order
- */
-class LongerFirstComparator implements Comparator<String> {
-    @Override
-    public int compare(String left, String right) {
-        if (left.length() == right.length()) {
-            return left.compareTo(right);
-        }
-        return right.length() - left.length();
+        System.out.println("Sorted from shorter to longer, then naturally: " + Arrays.toString(names));
     }
 }
