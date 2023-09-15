@@ -1,9 +1,17 @@
+/*
+ * Introduction to Functional Programming with Java
+ * 
+ * https://github.com/egalli64/jafp
+ */
 package com.example.jafp.s07;
 
 import java.util.function.DoublePredicate;
 import java.util.function.DoubleToIntFunction;
 import java.util.function.IntConsumer;
 
+/**
+ * Some predefined functional interfaces specialized for primitives
+ */
 public class FunctionalPrimitiveExample {
     public static void main(String[] args) {
         // double -> boolean

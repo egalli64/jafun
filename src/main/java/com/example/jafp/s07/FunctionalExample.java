@@ -1,3 +1,8 @@
+/*
+ * Introduction to Functional Programming with Java
+ * 
+ * https://github.com/egalli64/jafp
+ */
 package com.example.jafp.s07;
 
 import java.util.function.BiFunction;
@@ -8,6 +13,9 @@ import java.util.function.Predicate;
 import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 
+/**
+ * Some predefined functional interfaces
+ */
 public class FunctionalExample {
     public static void main(String[] args) {
         // void -> void
