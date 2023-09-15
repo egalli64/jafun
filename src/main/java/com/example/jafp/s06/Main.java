@@ -1,6 +1,17 @@
+/*
+ * Introduction to Functional Programming with Java
+ * 
+ * https://github.com/egalli64/jafp
+ */
 package com.example.jafp.s06;
 
+/**
+ * Closure use examples
+ */
 public class Main {
+    /**
+     * Store a closure in a local variable, then use it
+     */
     private static void local() {
         System.out.println("Using a closure on a local variable");
         MonthName monthName = LocalClosure.closure();
@@ -12,6 +23,10 @@ public class Main {
         System.out.println(monthName.asString(13));
     }
 
+    /**
+     * Get a closure enclosing data member from another class, then use it. Notice
+     * that the closure is changed while used.
+     */
     private static void member() {
         System.out.println("Using a closure on a member variable");
         MonthName monthName = MemberClosure.closure();
@@ -32,6 +47,11 @@ public class Main {
         System.out.println(monthName.asString(13));
     }
 
+    /**
+     * Store in a local variable an object containing a closure
+     * 
+     * @return a closure
+     */
     private static MonthName memberInstance() {
         MemberClosureInstance mci = new MemberClosureInstance();
 
@@ -40,6 +60,11 @@ public class Main {
         return mci.closure();
     }
 
+    /**
+     * Use some different closures
+     * 
+     * @param args not used
+     */
     public static void main(String[] args) {
         local();
         member();
