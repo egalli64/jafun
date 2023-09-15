@@ -1,9 +1,17 @@
+/*
+ * Introduction to Functional Programming with Java
+ * 
+ * https://github.com/egalli64/jafp
+ */
 package com.example.jafp.s09;
 
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * Composing comparators
+ */
 public class ComparatorComposition {
     public static void main(String[] args) {
         List<Dog> dogs = Arrays.asList( //

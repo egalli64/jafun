@@ -1,9 +1,17 @@
+/*
+ * Introduction to Functional Programming with Java
+ * 
+ * https://github.com/egalli64/jafp
+ */
 package com.example.jafp.s09;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 
+/**
+ * Composing predicates
+ */
 public class PredicateComposition {
     public static void main(String[] args) {
         List<Dog> dogs = Arrays.asList( //

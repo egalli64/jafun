@@ -1,7 +1,15 @@
+/*
+ * Introduction to Functional Programming with Java
+ * 
+ * https://github.com/egalli64/jafp
+ */
 package com.example.jafp.s09;
 
 import java.util.function.Function;
 
+/**
+ * Composing functions
+ */
 public class FunctionComposition {
     public static void main(String[] args) {
         Function<Integer, Integer> doubler = x -> x * 2;
