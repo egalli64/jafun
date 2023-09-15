@@ -1,7 +1,15 @@
+/*
+ * Introduction to Functional Programming with Java
+ * 
+ * https://github.com/egalli64/jafp
+ */
 package com.example.jafp.s08;
 
 import java.util.Optional;
 
+/**
+ * Optional and FP
+ */
 public class Main {
     private static void checkPresence() {
         Optional<String> empty = Optional.empty();
