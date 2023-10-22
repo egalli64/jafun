@@ -10,7 +10,7 @@ package com.example.jafun.m1.dto.rec;
 /**
  * A modern comparable dog, name first, then owner
  */
-record Dog(String name, String owner) implements Comparable<Dog> {
+public record Dog(String name, String owner) implements Comparable<Dog> {
     @Override
     public int compareTo(Dog other) {
         if (this == other) {

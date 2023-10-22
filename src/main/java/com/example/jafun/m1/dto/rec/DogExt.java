@@ -10,7 +10,7 @@ package com.example.jafun.m1.dto.rec;
 /**
  * A modern dog with extra info
  */
-record DogExt(Dog dog, int age, double weight) {
+public record DogExt(Dog dog, int age, double weight) {
     /**
      * Create the basic dog and inject it in the new record
      * 
