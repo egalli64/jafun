@@ -16,6 +16,10 @@ public class CreationUnbound {
     public static void main(String[] args) {
         System.out.println("The even numbers - size limited five");
         Stream.iterate(2, x -> x + 2).limit(5).forEach(System.out::println);
+        // same, writing the lambda in a more verbose form
+//        Stream.iterate(2, (Integer x) -> {
+//            return x + 2;
+//        }).limit(5).forEach(System.out::println);
         System.out.println("---");
 
         System.out.println("The odd numbers, terminated when the first one not less than 6 is found");
