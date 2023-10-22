@@ -20,5 +20,8 @@ public class CollectionToStream {
         System.out.println("Collection -> Stream -> operate on it");
         Stream<String> stream = data.stream();
         stream.forEach(System.out::println);
+
+        // same, in compact form
+        // List.of("first", "second", "third").stream().forEach(System.out::println);
     }
 }
