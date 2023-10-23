@@ -12,7 +12,7 @@ import java.util.List;
 import com.example.jafun.m1.dto.bean.Dog;
 
 /**
- * Reducing on a stream of records
+ * Reducing on a stream of JavaBeans
  */
 public class Reducing {
     public static void main(String[] args) {
