@@ -19,7 +19,7 @@ public record DogExt(Dog dog, int age, double weight) {
      * @param age    dog age
      * @param weight dog weight
      */
-    DogExt(String name, String owner, int age, double weight) {
+    public DogExt(String name, String owner, int age, double weight) {
         this(new Dog(name, owner), age, weight);
     }
 }
