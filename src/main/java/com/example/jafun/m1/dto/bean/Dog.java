@@ -71,6 +71,6 @@ public class Dog implements Comparable<Dog> {
 
     @Override
     public String toString() {
-        return "DogBean [name=" + name + ", owner=" + owner + "]";
+        return "Dog [name=" + name + ", owner=" + owner + "]";
     }
 }
