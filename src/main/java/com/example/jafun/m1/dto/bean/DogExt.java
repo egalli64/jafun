@@ -41,6 +41,6 @@ public class DogExt extends Dog {
 
     @Override
     public String toString() {
-        return "DogExtBean [name=" + getName() + ", owner=" + getOwner() + "age=" + age + ", weight=" + weight + "]";
+        return "DogExt [age=" + age + ", weight=" + weight + ", name=" + getName() + ", owner=" + getOwner() + "]";
     }
 }
