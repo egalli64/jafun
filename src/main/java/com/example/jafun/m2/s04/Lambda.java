@@ -1,9 +1,11 @@
 /*
  * Introduction to Functional Programming with Java
  * 
- * https://github.com/egalli64/jafp
+ * Module 2 - FP
+ * 
+ * https://github.com/egalli64/jafun
  */
-package com.example.jafun.s04;
+package com.example.jafun.m2.s04;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,7 +14,7 @@ import java.util.Comparator;
 /**
  * Lambda syntax
  */
-public class LambdaMain {
+public class Lambda {
     /**
      * A verbose lambda for Comparator Functional Interface
      * <p>
