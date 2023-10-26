@@ -1,16 +1,21 @@
 /*
  * Introduction to Functional Programming with Java
  * 
- * https://github.com/egalli64/jafp
+ * Module 2 - FP
+ * 
+ * https://github.com/egalli64/jafun
  */
-package com.example.jafun.s08;
+package com.example.jafun.m2.s09;
 
 import java.util.Optional;
 
 /**
  * Optional and FP
  */
-public class Main {
+public class OptionalFun {
+    /**
+     * isPresent vs ifPresent / ifPresentOrElse
+     */
     private static void checkPresence() {
         Optional<String> empty = Optional.empty();
         Optional<Double> good = Optional.of(42.5);
@@ -36,6 +41,9 @@ public class Main {
                 () -> System.out.println("There's no value in this optional!"));
     }
 
+    /**
+     * isPresent + get vs filter + ifPresent
+     */
     private static void checkValue() {
         Optional<Double> good = Optional.of(42.5);
         double limit = 40.0;
