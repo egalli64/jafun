@@ -1,9 +1,11 @@
 /*
  * Introduction to Functional Programming with Java
  * 
- * https://github.com/egalli64/jafp
+ * Module 2 - FP
+ * 
+ * https://github.com/egalli64/jafun
  */
-package com.example.jafun.s06;
+package com.example.jafun.m2.s06;
 
 /**
  * A class providing instance-level context to a lambda to make it a closure
