@@ -1,14 +1,16 @@
 /*
  * Introduction to Functional Programming with Java
  * 
- * https://github.com/egalli64/jafp
+ * Module 2 - FP
+ * 
+ * https://github.com/egalli64/jafun
  */
-package com.example.jafun.s05;
+package com.example.jafun.m2.s05.rec;
 
 /**
  * A modern comparable DTO
  */
-record Dog(String name) implements Comparable<Dog> {
+public record Dog(String name) implements Comparable<Dog> {
     @Override
     public int compareTo(Dog other) {
         return this.name.compareTo(other.name);

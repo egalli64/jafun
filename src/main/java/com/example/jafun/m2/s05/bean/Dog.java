@@ -1,22 +1,24 @@
 /*
  * Introduction to Functional Programming with Java
  * 
- * https://github.com/egalli64/jafp
+ * Module 2 - FP
+ * 
+ * https://github.com/egalli64/jafun
  */
-package com.example.jafun.s05;
+package com.example.jafun.m2.s05.bean;
 
 import java.util.Objects;
 
 /**
  * A classic comparable DTO, following JavaBean conventions
  */
-class BeanDog implements Comparable<BeanDog> {
+class Dog implements Comparable<Dog> {
     private String name;
 
-    public BeanDog() {
+    public Dog() {
     }
 
-    public BeanDog(String name) {
+    public Dog(String name) {
         this.name = name;
     }
 
@@ -41,17 +43,17 @@ class BeanDog implements Comparable<BeanDog> {
             return false;
         if (getClass() != obj.getClass())
             return false;
-        BeanDog other = (BeanDog) obj;
+        Dog other = (Dog) obj;
         return Objects.equals(name, other.name);
     }
 
     @Override
-    public int compareTo(BeanDog other) {
+    public int compareTo(Dog other) {
         return this.name.compareTo(other.name);
     }
 
     @Override
     public String toString() {
-        return "BeanDog [name=" + name + "]";
+        return "Dog [name=" + name + "]";
     }
 }
