@@ -1,9 +1,11 @@
 /*
  * Introduction to Functional Programming with Java
  * 
- * https://github.com/egalli64/jafp
+ * Module 2 - FP
+ * 
+ * https://github.com/egalli64/jafun
  */
-package com.example.jafun.s09;
+package com.example.jafun.m2.s08;
 
 import java.util.function.Function;
 

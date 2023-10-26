@@ -1,23 +1,25 @@
 /*
  * Introduction to Functional Programming with Java
  * 
- * https://github.com/egalli64/jafp
+ * Module 2 - FP
+ * 
+ * https://github.com/egalli64/jafun
  */
-package com.example.jafun.s09;
+package com.example.jafun.m2.s08.rec;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 
 /**
- * Composing predicates
+ * Composing predicates on records
  */
 public class PredicateComposition {
     public static void main(String[] args) {
         List<Dog> dogs = Arrays.asList( //
-                new Dog("Bob", "Robert Mitchum", 11), //
-                new Dog("Rob", "Robert Redford", 4), //
-                new Dog("Bob", "Robert Redford", 11) //
+                new Dog("Bob", "Bart", 11), //
+                new Dog("Rob", "Bart", 4), //
+                new Dog("Rob", "Dino", 11) //
         );
 
         System.out.println("A dog list: " + dogs);
@@ -39,11 +41,11 @@ public class PredicateComposition {
             }
         }
 
-        Predicate<Dog> redford = dog -> dog.owner().endsWith("Redford");
+        Predicate<Dog> rt = dog -> dog.owner().endsWith("rt");
 
-        System.out.println("\nOld dogs owned by Redford:");
+        System.out.println("\nOld dogs owned by *rt:");
         for (Dog dog : dogs) {
-            if (old.and(redford).test(dog)) {
+            if (old.and(rt).test(dog)) {
                 System.out.println(dog);
             }
         }
@@ -57,16 +59,16 @@ public class PredicateComposition {
             }
         }
 
-        System.out.println("\nNamed Rob or owned by Redford:");
+        System.out.println("\nNamed Rob or owned by *rt:");
         for (Dog dog : dogs) {
-            if (rob.or(redford).test(dog)) {
+            if (rob.or(rt).test(dog)) {
                 System.out.println(dog);
             }
         }
 
-        System.out.println("\nNot (named Rob or owned by Redford):");
+        System.out.println("\nNot (named Rob or owned by *rt):");
         for (Dog dog : dogs) {
-            if (rob.or(redford).negate().test(dog)) {
+            if (rob.or(rt).negate().test(dog)) {
                 System.out.println(dog);
             }
         }
