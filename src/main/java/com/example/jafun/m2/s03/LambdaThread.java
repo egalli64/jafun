@@ -1,9 +1,11 @@
 /*
  * Introduction to Functional Programming with Java
  * 
- * https://github.com/egalli64/jafp
+ * Module 2 - FP
+ * 
+ * https://github.com/egalli64/jafun
  */
-package com.example.jafun.s03;
+package com.example.jafun.m2.s03;
 
 /**
  * High-Order Function in Java - Thread example
