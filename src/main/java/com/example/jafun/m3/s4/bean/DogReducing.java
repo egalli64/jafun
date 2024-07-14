@@ -1,19 +1,19 @@
 /*
  * Introduction to Functional Programming with Java
  * 
- * Module 1 - Stream
+ * Module 3 - collect from Stream
  * 
  * https://github.com/egalli64/jafun
  */
-package com.example.jafun.m1.s15.rec;
+package com.example.jafun.m3.s4.bean;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.example.jafun.m1.dto.rec.DogExt;
+import com.example.jafun.m1.dto.bean.DogExt;
 
 /**
- * Working on records with specialized reducing collectors
+ * Working on JavaBeans with specialized reducing collectors
  */
 public class DogReducing {
     public static void main(String[] args) {
@@ -26,6 +26,6 @@ public class DogReducing {
         System.out.println("Dogs: " + dogs);
 
         System.out.print("Dogs total weight (by reducing collector) is ");
-        System.out.println(dogs.stream().collect(Collectors.reducing(0.0, DogExt::weight, Double::sum)));
+        System.out.println(dogs.stream().collect(Collectors.reducing(0.0, DogExt::getWeight, Double::sum)));
     }
 }
