@@ -1,11 +1,11 @@
 /*
  * Introduction to Functional Programming with Java
  * 
- * Module 1 - Stream
+ * Module 3 - collect from Stream
  * 
  * https://github.com/egalli64/jafun
  */
-package com.example.jafun.m1.s16;
+package com.example.jafun.m3.s5;
 
 import java.util.List;
 import java.util.TreeMap;
