@@ -1,11 +1,11 @@
 /*
  * Introduction to Functional Programming with Java
  * 
- * Module 2 - FP
+ * Module 2 - FP by lambda expression
  * 
  * https://github.com/egalli64/jafun
  */
-package com.example.jafun.m2.s06;
+package com.example.jafun.m2.s6;
 
 /**
  * A class that works on a closure
