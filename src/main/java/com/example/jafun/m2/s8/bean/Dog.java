@@ -1,11 +1,11 @@
 /*
  * Introduction to Functional Programming with Java
  * 
- * Module 1 - Stream
+ * Module 2 - FP by lambda expression
  * 
  * https://github.com/egalli64/jafun
  */
-package com.example.jafun.m2.s08.bean;
+package com.example.jafun.m2.s8.bean;
 
 import java.util.Objects;
 

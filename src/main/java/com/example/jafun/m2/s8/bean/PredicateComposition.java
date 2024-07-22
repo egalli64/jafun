@@ -1,18 +1,18 @@
 /*
  * Introduction to Functional Programming with Java
  * 
- * Module 2 - FP
+ * Module 2 - FP by lambda expression
  * 
  * https://github.com/egalli64/jafun
  */
-package com.example.jafun.m2.s08.rec;
+package com.example.jafun.m2.s8.bean;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 
 /**
- * Composing predicates on records
+ * Composing predicates on JavaBeans
  */
 public class PredicateComposition {
     public static void main(String[] args) {
@@ -24,7 +24,7 @@ public class PredicateComposition {
 
         System.out.println("A dog list: " + dogs);
 
-        Predicate<Dog> old = dog -> dog.age() > 10;
+        Predicate<Dog> old = dog -> dog.getAge() > 10;
 
         // we should really use java.util.stream here!
         System.out.println("\nOld dogs:");
@@ -41,7 +41,7 @@ public class PredicateComposition {
             }
         }
 
-        Predicate<Dog> rt = dog -> dog.owner().endsWith("rt");
+        Predicate<Dog> rt = dog -> dog.getOwner().endsWith("rt");
 
         System.out.println("\nOld dogs owned by *rt:");
         for (Dog dog : dogs) {
@@ -50,7 +50,7 @@ public class PredicateComposition {
             }
         }
 
-        Predicate<Dog> rob = dog -> dog.name().equals("Rob");
+        Predicate<Dog> rob = dog -> dog.getName().equals("Rob");
 
         System.out.println("\nNamed Rob:");
         for (Dog dog : dogs) {
