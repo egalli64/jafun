@@ -1,11 +1,11 @@
 /*
  * Introduction to Functional Programming with Java
  * 
- * Module 2 - FP
+ * Module 2 - FP by lambda expression
  * 
  * https://github.com/egalli64/jafun
  */
-package com.example.jafun.m2.s02;
+package com.example.jafun.m2.s2;
 
 /**
  * A runnable class, implementing the method to be run in a new thread
