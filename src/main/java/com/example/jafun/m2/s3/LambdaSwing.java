@@ -1,11 +1,11 @@
 /*
  * Introduction to Functional Programming with Java
  * 
- * Module 2 - FP
+ * Module 2 - FP by lambda expression
  * 
  * https://github.com/egalli64/jafun
  */
-package com.example.jafun.m2.s03;
+package com.example.jafun.m2.s3;
 
 import java.awt.event.ActionListener;
 
