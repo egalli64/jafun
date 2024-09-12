@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
 /**
  * Lambda syntax
  */
-public class MethRef3ActionListenerDeduced {
+public class MethRef3ActionListener {
     /**
      * Defining an ActionListener lambda by method reference
      * <p>
