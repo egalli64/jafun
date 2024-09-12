@@ -1,11 +1,9 @@
 /*
  * Introduction to Functional Programming with Java
  * 
- * Module 2 - FP by lambda expression
- * 
  * https://github.com/egalli64/jafun
  */
-package com.example.jafun.m2.s2;
+package com.example.jafun.m1.s3;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,10 +14,10 @@ import javax.swing.JPanel;
 import javax.swing.WindowConstants;
 
 /**
- * High-Order Function emulation in classic Java - Event manager example
+ * High-Order Function in classic Java - Event manager example
  * <p>
  * A simple swing frame that deals with a couple of events
- * 
+ * <p>
  * It defines an inner class implementing the action to be executed when one of
  * the two events is observed, then add an action listener on a button for it
  * <p>
@@ -27,7 +25,7 @@ import javax.swing.WindowConstants;
  * fly. If the action performed is slim enough, this is the preferred approach
  */
 @SuppressWarnings("serial")
-public class ClassicSwing extends JFrame {
+public class HOF2Event extends JFrame {
     private final JButton btnLeft;
     private final JButton btnRight;
     private int counterLeft;
@@ -43,16 +41,19 @@ public class ClassicSwing extends JFrame {
         }
     }
 
-    public ClassicSwing() {
+    public HOF2Event() {
         setSize(300, 100);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("Hello");
 
         btnLeft = new JButton("Click me!");
+        // create an object of the stated inner class as event listener
         btnLeft.addActionListener(new LeftButtonChanger());
 
         btnRight = new JButton("...or me!");
+
+        // an anonymous event listener is created on the fly
         btnRight.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -74,6 +75,6 @@ public class ClassicSwing extends JFrame {
      * @param args not used
      */
     public static void main(String[] args) {
-        new ClassicSwing();
+        new HOF2Event();
     }
 }
