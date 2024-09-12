@@ -1,11 +1,9 @@
 /*
  * Introduction to Functional Programming with Java
  * 
- * Module 2 - FP by lambda expression
- * 
  * https://github.com/egalli64/jafun
  */
-package com.example.jafun.m2.s2;
+package com.example.jafun.m1.s3;
 
 import java.util.Comparator;
 
@@ -14,7 +12,7 @@ import java.util.Comparator;
  * <p>
  * The strings are ordered by size, then by alphabetic natural order
  */
-class LongerFirstComparator implements Comparator<String> {
+public class LongerFirstComparator implements Comparator<String> {
     @Override
     public int compare(String s, String t) {
         return s.length() == t.length() ? s.compareTo(t) : t.length() - s.length();
