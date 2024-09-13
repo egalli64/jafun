@@ -1,11 +1,9 @@
 /*
  * Introduction to Functional Programming with Java
  * 
- * Module 2 - FP by lambda expression
- * 
  * https://github.com/egalli64/jafun
  */
-package com.example.jafun.m2.s7;
+package com.example.jafun.m2.s3;
 
 import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
