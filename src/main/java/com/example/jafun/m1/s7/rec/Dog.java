@@ -5,7 +5,7 @@
  * 
  * https://github.com/egalli64/jafun
  */
-package com.example.jafun.m2.s5.rec;
+package com.example.jafun.m1.s7.rec;
 
 /**
  * A modern comparable DTO
