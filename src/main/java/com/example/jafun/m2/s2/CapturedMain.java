@@ -1,16 +1,14 @@
 /*
  * Introduction to Functional Programming with Java
  * 
- * Module 2 - FP by lambda expression
- * 
  * https://github.com/egalli64/jafun
  */
-package com.example.jafun.m2.s6;
+package com.example.jafun.m2.s2;
 
 /**
  * Closure on instance/class data member and local variable
  */
-public class Captured {
+public class CapturedMain {
     private static int classValue = 42;
     private double instanceValue = Math.E;
 
@@ -37,6 +35,6 @@ public class Captured {
     }
 
     public static void main(String[] args) {
-        new Captured().capturing();
+        new CapturedMain().capturing();
     }
 }
