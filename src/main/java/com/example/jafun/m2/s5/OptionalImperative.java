@@ -1,11 +1,9 @@
 /*
  * Introduction to Functional Programming with Java
  * 
- * Module 2 - FP by lambda expression
- * 
  * https://github.com/egalli64/jafun
  */
-package com.example.jafun.m2.s9;
+package com.example.jafun.m2.s5;
 
 import java.util.Optional;
 
