@@ -3,15 +3,15 @@
  * 
  * https://github.com/egalli64/jafun
  */
-package com.example.jafun.m1.s6;
+package com.example.jafun.m1.s7;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 /**
- * Lambda syntax
+ * Method reference syntax example
  */
-public class MethRef3ActionListener {
+public class AMethRefExample {
     /**
      * Defining an ActionListener lambda by method reference
      * <p>
