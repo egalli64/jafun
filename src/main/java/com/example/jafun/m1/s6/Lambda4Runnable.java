@@ -3,7 +3,7 @@
  * 
  * https://github.com/egalli64/jafun
  */
-package com.example.jafun.m1.s5;
+package com.example.jafun.m1.s6;
 
 /**
  * Lambda syntax
