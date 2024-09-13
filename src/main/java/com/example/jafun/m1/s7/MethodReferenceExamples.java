@@ -1,11 +1,9 @@
 /*
  * Introduction to Functional Programming with Java
  * 
- * Module 2 - FP by lambda expression
- * 
  * https://github.com/egalli64/jafun
  */
-package com.example.jafun.m2.s5;
+package com.example.jafun.m1.s7;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -16,7 +14,7 @@ import java.util.function.Supplier;
 /**
  * Method reference vs explicit method call in a lambda
  */
-public class MethodReference {
+public class MethodReferenceExamples {
     private static final String[] names = { "Tom", "Mo", "Kelly", "Teddie" };
 
     /**
@@ -36,16 +34,16 @@ public class MethodReference {
     }
 
     public static void main(String[] args) {
-        System.out.println("As created: " + Arrays.toString(names));
+        System.out.println("An array of strings, as created: " + Arrays.toString(names));
 
         Arrays.sort(names);
         System.out.println("In natural order: " + Arrays.toString(names));
 
-        // lambda
+        // pass a lambda to sort()
         Arrays.sort(names, (l, r) -> Integer.compare(l.length(), r.length()));
         System.out.println("In length order (by lambda): " + Arrays.toString(names));
 
-        // method reference
+        // pass a method reference to sort()
         Arrays.sort(names, String::compareTo);
         System.out.println("In natural order (by method reference): " + Arrays.toString(names));
 
@@ -55,12 +53,12 @@ public class MethodReference {
         System.out.println("\nPrint each element by lambda");
         list.forEach(s -> System.out.println(s));
 
-        // method reference
+        // pass a method reference to forEach()
         System.out.println("\nPrint each element by method reference");
         list.forEach(System.out::println);
 
-        // new by method reference
-        Collection<String> sortedNames = MethodReference.get(TreeSet::new);
+        // pass new as method reference to get()
+        Collection<String> sortedNames = MethodReferenceExamples.get(TreeSet::new);
         sortedNames.add("Lily");
         System.out.println("\nNames in a tree set " + sortedNames);
     }
