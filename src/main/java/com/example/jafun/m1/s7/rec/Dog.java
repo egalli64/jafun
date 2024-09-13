@@ -1,8 +1,6 @@
 /*
  * Introduction to Functional Programming with Java
  * 
- * Module 2 - FP by lambda expression
- * 
  * https://github.com/egalli64/jafun
  */
 package com.example.jafun.m1.s7.rec;
